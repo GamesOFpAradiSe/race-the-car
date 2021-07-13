@@ -1,7 +1,4 @@
-// maim i want to give the gameState in making the object and display if car
-//collided with the o1 o2 o3 o4 o5 o6 then the gamestate end 
-//maim in this case my star will go down in my review of this project in whiteHatjr
-//maim i also uploaded the code of plinko 2
+
 
 
 const Engine = Matter.Engine;
@@ -45,7 +42,7 @@ steering = new Steering(200,420)
  border = new Border(594,height/2,5,height)
  meter = new Meter({x:88,y:434},{x:200,y:420})
 // Matter.Body.setVertices(meter.body, {x:88,y:434+10})
-//bgm.play()
+bgm.play()
  
 }
 
@@ -68,9 +65,7 @@ function draw() {
         if (frameCount % 100 === 0) 
         { o1.push(new Opposite(random([570, 500, 577]), -10, 50, 100))
          }
-    if(frameCount%12 === 0){
-      win.push(new Win(-50,height/2,100,50))
-    }
+    console.log("wait please play then check")
     
         imageMode(CENTER)
         image(bgi, bg.x, bg.y, width + 1000, height - height)
@@ -143,6 +138,7 @@ function draw() {
     
       if (gS == "LOSE") {
         //giving background as black when gamestate is lose
+        console.log("now can check")
         background(bgf)
         fill("blue")
         textFont("italic")
@@ -155,22 +151,9 @@ function draw() {
         image(r1,120,50,50,50)
       
       }
-
+}
       
-      if (gS == "WIN") {
-        
-        background(winner)
-        fill("blue")
-        textFont("italic")
-        stroke("lightblue")
-        strokeWeight(10)
-        textSize(100)
-        text("^_^👍U Win👍^_^",width/2,height/2)
-       
       
-      }
-    
-    }
   
     
     
